@@ -1308,7 +1308,7 @@ body {
   height: 100px;
   object-fit: cover;
   cursor: pointer;
-  border: 2px solid #ccc;
+  border: 2px solid #33aa33;
 }
 
 .thumbnail:hover {
@@ -1339,8 +1339,25 @@ body {
     overflow: hidden;
   }
   
+  .thumbnail {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  }
+
+  .swiper-slide {
+    margin-right: -12px; /* Adjust this value as needed */
+  }
+
+  .swiper-container {
+    overflow: visible;
+  }
+
   .main-image-container {
-    display: none; 
+    display: none;
   }
   
   .thumbnail-images {

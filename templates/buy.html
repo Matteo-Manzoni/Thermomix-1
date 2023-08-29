@@ -159,9 +159,11 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto', 
-      navigation: false,     
-      pagination: false,     
+      slidesPerView: 'auto',
+      loop: true, // Enable circular loop
+      initialSlide: 1, // Start from the second slide for circular loop
+      navigation: false,
+      pagination: false,
     });
   });
 </script>
