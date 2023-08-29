@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+  <script src="https://kit.fontawesome.com/f4d2f86d5b.js" crossorigin="anonymous"></script>
+</head>
+
+  
+
+  <header>
+    <div class="header-container">
+      <h1>ThermoBella</h1>
+        <div class="social-icons">
+          <div class="left-icons">
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style="color: white;"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" style="color: white;"></i></a>
+          </div>
+          <div class="right-icons">
+            <a href="tel:+123456789"><i class="fas fa-phone" style="color: white;"></i></a>
+            <span class="phone-text">071234567</span>
+            <a href="mailto:info@example.com"><i class="far fa-envelope" style="color: white;"></i></a>
+            <span class="email-text">info@example.com</span>
+          </div>
+        </div>
+      
+    </div>
+  </header>
+
+  
+<div class="thermobella-title">
+  <h2>ThermoBella</h2>
+</div>
+
+
+
+
+<!-- Sidebar -->
+<div class="sidebar-toggle-button">
+  <div class="hamburger-icon">
+    <i class="fas fa-bars fa-2x" ></i>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<div id="sidebar" class="home-sidebar">
+  <nav class="home-nav">
+  <div class="top-links">
+    <h2 class="thermobella-title">ThermoBella</h2>
+    <button class="close-button">X</button>
+  </div>
+  <a href="/">Home</a>
+  <a href="/about">About Me</a>
+  <a href="/buy">Buy</a>
+  <a href="/join-us">Join Us</a>
+  <a href="/demos">Demos</a>
+  <a href="/what-is-a-thermomix">What is a Thermomix</a>
+</nav>
+  <div>
+    <svg viewBox="0 0 950.8571428571428 1024" class="home-icon1"></svg>
+  </div>
+</div>
+<div class="overlay"></div>
+
+
+  
+<!-- Content -->
+<div class="content">
+
+  
+  <!-- Contents Links -->
+  <div class="contents">
+    <a href="/">Home</a>
+    <a href="/about">About Me</a>
+    <a href="/buy">Buy</a>
+    <a href="/join-us">Join Us</a>
+    <a href="/demos">Demos</a>
+    <a href="/what-is-a-thermomix">What is a Thermomix</a>
+    <!-- Add more content links as needed -->
+  </div>
+
+</div>
+
+
+ <div class="home-hero3">
+  <div class="home-container1">
+    <h1 class="home-text091">Book a Demo</h1>
+    <div class="home-text092">
+      <span >
+        What if this is the text?andietbetbuebuebwfiwebfuiabfibaewfibefuiwaebfiwef
+      </span>
+      <span>
+        join as an advisor and get a discount on your thermomix or earn it  
+      </span>
+    </div>
+    <button class="home-button1 button "onclick="navigateToBuy() ">Buy one right now</button>
+  </div>
+</div> 
+
+
+
+
+  
+<div class="form-container">
+      <h2>Book your demo</h2>
+      <form action="https://formsubmit.co/cc36dece6328496486501f3409d37610" method="POST" class="contact-form">
+        <!--Honeypot -->
+        <input type="text" name="_honey" style="display: none;">
+        <!-- disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+          
+        <div class="form-group">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname" required>
+        </div>
+        <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number:</label>
+          <input type="tel" id="mobile" name="mobile" required>
+        </div>
+        <div class="form-group">
+          <label for="postcode">Post Code:</label>
+          <input type="text" id="postcode" name="postcode" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+
+
+        <div class="payment-options">
+        <label>What would you like to do?</label>
+        <div class="radio-group">
+          <input type="radio" id="payCard" name="payment" value="card">
+          <label for="payCard">Pay by Card £1189</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" id="pay12Months" name="payment" value="12months">
+          <label for="pay12Months">12 months - £106.74</label>
+        </div>
+        </div>
+      </form>
+</div>
+
+  <div class="sophisticated-heading">
+  <span> What to expect from your demonstration </span>
+</div>
+
+
+  <footer class="w3-footer w3-theme-d1 w3-margin-top">
+    <a href="#home" onclick="scrollToTop()">To the top</a>
+  </footer>
+  <script src="{{ url_for('static', filename='scripts/sidebar.js') }}"></script>
+  
+</html>
