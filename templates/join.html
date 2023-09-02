@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
-  <link rel="stylesheet" href="static/colours.css">
-  <link rel="stylesheet" href="static/your-updated-style.css"> 
   <script src="https://kit.fontawesome.com/f4d2f86d5b.js" crossorigin="anonymous"></script>
 </head>
 
+  
   
 <body>
   <header>
@@ -21,8 +21,8 @@
             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" style="color: white;"></i></a>
           </div>
           <div class="right-icons">
-            <a href="tel:+123456789"><i class="fas fa-phone" style="color: white;"></i></a>
-            <span class="phone-text">071234567</span>
+            <a href="tel:+44 7391 585516"><i class="fas fa-phone" style="color: white;"></i></a>
+            <span class="phone-text">07391 585516</span>
             <a href="mailto:info@example.com"><i class="far fa-envelope" style="color: white;"></i></a>
             <span class="email-text">info@example.com</span>
           </div>
@@ -80,18 +80,69 @@
     <a href="/join-us">Join Us</a>
     <a href="/demos">Demos</a>
     <a href="/what-is-a-thermomix">What is a Thermomix</a>
-    <!-- Add more content links as needed -->
   </div>
 
 </div>
 
-<head>
-  <title>About</title>
-</head>
-<body>
-  <h1>About Page</h1>
-  <p>This is the about page of my website.</p>
-</body>
+
+  <section class="discount-offer">
+  <div class="discount-content">
+    <h2>Limited Monthly Offer!</h2>
+    <div class="countdown-timer">
+      <span id="days"></span> days
+      <span id="hours"></span> hours
+      <span id="minutes"></span> minutes
+      <span id="seconds"></span> seconds
+    </div>
+  </div>
+</section>
+
+
+  
+
+
+<div class="form-container-join">
+  <div class="contact-form">
+    <h2>Book your demo</h2>
+    <form action="https://formspree.io/f/mrgwkgej" method="POST" class="contact-form">
+
+      <div class="form-group-join">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required>
+    </div>
+    <!-- Add other form groups for Last Name, Email, Mobile Number, Post Code, and Message -->
+    
+    <div class="form-group-join">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group-join">
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required>
+    </div>
+    
+    <div class="form-group-join">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+
+      <div class="form-group-join2">
+        <label>What would you like to do?</label>
+        <div class="form-check">
+          <input type="checkbox" id="demo" name="options[]" value="demo">
+          <label for="demo">Book a Demo</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="chat" name="options[]" value="chat">
+          <label for="chat">Have a Chat</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</div>
 
 
 
@@ -100,10 +151,9 @@
 
 
 
-  <footer class="w3-footer w3-theme-d1 w3-margin-top">
-    <a href="#home" onclick="scrollToTop()">To the top</a>
-  </footer>
+  
   <script src="{{ url_for('static', filename='scripts/sidebar.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/offers.js') }}"></script>
 
 
 </body>

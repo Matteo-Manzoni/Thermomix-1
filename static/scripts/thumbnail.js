@@ -1,12 +1,31 @@
 //buy page
-document.addEventListener("DOMContentLoaded", function () {
-    const thumbnailImages = document.querySelectorAll(".thumbnail");
-    const mainImage = document.querySelector(".main-image"); // Change to your actual main image selector
 
-    thumbnailImages.forEach((thumbnail) => {
-      thumbnail.addEventListener("click", () => {
-        const thumbnailSrc = thumbnail.getAttribute("src");
-        mainImage.setAttribute("src", thumbnailSrc);
-      });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      loop: true, 
+      initialSlide: 1, 
+      navigation: false,
+      pagination: false,
     });
   });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var paymentButton = document.getElementById('payment-button');
+    var paymentSection = document.getElementById('form-container'); // Confirm the ID here
+
+    paymentButton.addEventListener('click', function() {
+      paymentSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var paymentButton = document.getElementById('payment-button2');
+    var paymentSection = document.getElementById('form-container'); // Confirm the ID here
+
+    paymentButton.addEventListener('click', function() {
+      paymentSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});

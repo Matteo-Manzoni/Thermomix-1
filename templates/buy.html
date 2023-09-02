@@ -29,10 +29,10 @@
             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" style="color: white;"></i></a>
           </div>
           <div class="right-icons">
-            <a href="tel:+123456789"><i class="fas fa-phone" style="color: white;"></i></a>
-            <span class="phone-text">071234567</span>
+            <a href="tel:+44 7391 585516"><i class="fas fa-phone" style="color: white;"></i></a>
+            <span class="phone-text">07391 585516</span>
             <a href="mailto:info@example.com"><i class="far fa-envelope" style="color: white;"></i></a>
-            <span class="email-text">info@example.com</span>
+            <span class="email-text">Isabellaspreafico.com</span>
           </div>
         </div>
       
@@ -88,10 +88,21 @@
     <a href="/join-us">Join Us</a>
     <a href="/demos">Demos</a>
     <a href="/what-is-a-thermomix">What is a Thermomix</a>
-    <!-- Add more content links as needed -->
   </div>
 
 </div>
+
+<section class="discount-offer">
+  <div class="discount-content">
+    <h2>Limited Monthly Offer!</h2>
+    <div class="countdown-timer">
+      <span id="days"></span> days
+      <span id="hours"></span> hours
+      <span id="minutes"></span> minutes
+      <span id="seconds"></span> seconds
+    </div>
+  </div>
+</section>
 
 
 
@@ -100,10 +111,12 @@
     <div class="row">
       <div class="col-md-2">
         <div class="thumbnail-images">
-          <img src="path/to/Thermomix2.jpeg" class="thumbnail" alt="Thumbnail 1">
-          <img src="path/to/image1.jpeg" class="thumbnail" alt="Thumbnail 2">
-          <img src="path/to/image2.jpeg" class="thumbnail" alt="Thumbnail 3">
-          <img src="path/to/image3.jpeg" class="thumbnail" alt="Thumbnail 4">
+          <img src="{{ url_for('static', filename='images/image1.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
+          <img src="{{ url_for('static', filename='images/Thermomix11.jpeg') }}" class="thumbnail" alt="Thumbnail 2">
+          <img src="{{ url_for('static', filename='images/Thermomix12.jpeg') }}" class="thumbnail" alt="Thumbnail 3">
+          <img src="{{ url_for('static', filename='images/Thermomix13.jpeg') }}" class="thumbnail" alt="Thumbnail 4">
+          <img src="{{ url_for('static', filename='images/Thermomix15.jpeg') }}" class="thumbnail" alt="Thumbnail 4">
+          <img src="{{ url_for('static', filename='images/Thermomix7.jpeg') }}" class="thumbnail" alt="Thumbnail 4">
         </div>
       </div>
       <div class="col-md-4">
@@ -111,44 +124,46 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="{{ url_for('static', filename='Thermomix2.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
+                <img src="{{ url_for('static', filename='images/Thermomix7.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
               </div>
               <div class="swiper-slide">
-                <img src="{{ url_for('static', filename='image1.jpeg') }}" class="thumbnail" alt="Thumbnail 2">
+                <img src="{{ url_for('static', filename='images/image1.jpeg') }}" class="thumbnail" alt="Thumbnail 2">
               </div>
               <div class="swiper-slide">
-                <img src="{{ url_for('static', filename='Thermomix3.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
+                <img src="{{ url_for('static', filename='images/Thermomix11.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
               </div>
               <div class="swiper-slide">
-                <img src="path/to/image3.jpeg" class="thumbnail" alt="Thumbnail 4">
+                <img src="{{ url_for('static', filename='images/Thermomix12.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
               </div>
-              <!-- Add more swiper-slide elements for each thumbnail -->
+              <div class="swiper-slide">
+                <img src="{{ url_for('static', filename='images/Thermomix13.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
+              </div>
+              <div class="swiper-slide">
+                <img src="{{ url_for('static', filename='images/Thermomix15.jpeg') }}" class="thumbnail" alt="Thumbnail 1">
+              </div>
+        
             </div>
           </div>
         </div>
         <div class="main-image-container">
-          <img src="{{ url_for('static', filename='image1.jpeg') }}" class="img-fluid main-image" alt="Main Image">
+          <img src="{{ url_for('static', filename='images/image1.jpeg') }}" class="img-fluid main-image" alt="Main Image">
         </div>
       </div>
       <div class="col-md-6">
         <div class="home-hero-buy">
         <div class="home-container-buy">
-          <h4 class="home-text-buy">Magnificent things are very simple</h4>
+          <h4 class="home-text-buy">Discover the Thermomix Difference</h4>
+          <hr class="home-divider">
           <p class="home-text-buy1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non volutpat turpis.
+                    Unlock a world of culinary wonders with Thermomix. Elevate your cooking experience and redefine your kitchen journey.
           </p>
           <p class="home-text-buy1">
-            Mauris luctus rutrum mi ut rhoncus. Integer in dignissim tortor.
+        Embrace innovation and precision. Create gourmet masterpieces and everyday delights with Thermomix by your side.
           </p>
-          <p class="home-text-buy1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non volutpat turpis.
+          <p class="home-text-buy2">
+                    Ignite your passion for cooking. With Thermomix, the possibilities are limitless, and the extraordinary becomes routine.
           </p>
-          <p class="home-text-buy1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non volutpat turpis.
-          </p>
-          <p class="home-text-buy1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non volutpat turpis.
-          </p>
+          <button class="btn btn-primary mt-4" id="payment-button">Proceed to Payment</button>
         </div>
       </div>
     </div>
@@ -156,32 +171,211 @@
 </div>
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      loop: true, // Enable circular loop
-      initialSlide: 1, // Start from the second slide for circular loop
-      navigation: false,
-      pagination: false,
-    });
-  });
-</script>
 
+
+  
+<div class="home-container-steps">
+    <div class="home-steps">
+      <h1 class="home-text-steps"><span>Our Approach</span></h1>
+      <div class="home-container-steps1">
+        <div class="home-container-steps2">
+          <div class="home-step">
+            <h1 class="home-text-steps02"><span>1</span></h1>
+            <h1 class="home-text-steps04">
+              
+              <span>Order</span>
+            </h1>
+            <span class="home-text-steps07">
+              
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+              <br />
+              
+            </span>
+          </div>
+          <div class="home-step1">
+            <h1 class="home-text-steps12"><span>2</span></h1>
+            <h1 class="home-text-steps14"><span>Demo</span></h1>
+            <span class="home-text-steps16">
+              
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+              <br />
+              
+            </span>
+          </div>
+        </div>
+        <div class="home-container-steps3">
+          <div class="home-step2">
+            <h1 class="home-text-steps21"><span>3</span></h1>
+            <h1 class="home-text-steps23">
+              
+              <span>Make decision</span>
+            </h1>
+            <span class="home-text-steps26">
+              
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+              <br />
+              
+            </span>
+          </div>
+          <div class="home-step3">
+            <h1 class="home-text-steps31"><span>4</span></h1>
+            <h1 class="home-text-steps33"><span>Shipping</span></h1>
+            <span class="home-text-steps35">
+              
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+              <br />
+              
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{ url_for('static', filename='images/Thermomix8.jpeg') }}" class="img-fluid" alt="Image">
+    </div>
+    <div class="col-md-6">
+      <div class="home-hero50">
+        <div class="home-container50">
+          <h4 class="home-text50">Unveiling the Thermomix Magic</h4>
+          <hr class="home-divider">
+          <p class="home-text51">
+            Imagine a kitchen assistant that turns ordinary ingredients into extraordinary dishes, effortlessly.
+          </p>
+          <p class="home-text51">
+            Meet the Thermomix – a culinary masterpiece designed to inspire your inner chef and redefine your cooking experience.
+          </p>
+          <p class="home-text51">
+            Discover a world of delicious and creative possibilities with its versatility and simplicity.
+          </p>
+          <p class="home-text51">
+            Whether you're a seasoned cook or just starting out, the Thermomix's intuitive interface and guided recipes empower you to create gourmet meals with confidence.
+          </p>
+          <p class="home-text51">
+          The Thermomix is a culinary marvel that seamlessly combines blending, chopping, slicing, grating, peeling, slow cooking, scaling, and much more into a single, compact appliance. Its potential is boundless, awaiting exploration in your kitchen.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  
 
   
 
 
 
 
-  
+
+<div class="container" style="margin-bottom: 5%;">
+  <div class="row2">
+    <div class="col-md-6">
+      <div class="home-hero2">
+        <div class="home-container2">
+          <h4 class="home-text06">What does your thermomix come with?</h4>
+          <hr class="home-divider">
+          <p class="home-text07">
+  <li><strong>VAROMA:</strong> Discover the two-tiered steaming wonder perched atop your Thermomix.</li>
+  <li><strong>SIMMERING BASKET:</strong> From rice to potatoes, this versatile basket shines within the 'bowl'.</li>
+  <li><strong>BUTTERFLY WHISK - djaojfaiojf:</strong> Unleash its magic on meringues, sorbets, and more.</li>
+  <li><strong>BOWL:</strong> Embrace the jug-style bowl, complete with a user-friendly handle.</li>
+  <li><strong>MEASURING CUP:</strong> Safeguard against splashes, nestled in the lid, and removable during Varoma use.</li>
+  <li><strong>THERMOMIX SPATULA:</strong> A marvel unveiled during your demo—a tool that's as smart as it looks.</li>
+  <li><strong>INSTRUCTION MANUAL:</strong> Your key to unlocking Thermomix's full potential.</li>
+  <li><strong>‘Simple Ideas’ COOKBOOK:</strong> A gateway to endless culinary inspiration.</li>
+</p>
+
+          <p class="home-text07">
+            Experience peace of mind with a 2-year warranty (1 year for commercial purchases) and complimentary six-month access to Cookidoo, our online recipe hub. And with a generous 14-day money-back guarantee, you have the time to explore your Thermomix fully, ensuring it's the perfect fit for you.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="{{ url_for('static', filename='images/Thermomix4.jpeg') }}" class="home-image70" alt="Image">
+    </div>
+  </div>
+</div>  
+
+
+<section class="monthly-offer">
+  <div class="offer-container">
+    <div class="offer-content">
+      <h2>Monthly Special Offer</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non volutpat turpis.</p>
+      <p>Mauris luctus rutrum mi ut rhoncus. Integer in dignissim tortor.</p>
+      <button class="btn btn-primary mt-4" id="payment-button2">Proceed to Payment</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <div class="container">
+  <div class="row3">
+    <div class="home-hero-big2">
+      <div class="home-container-big2">
+        <h4 class="home-text-big06">Why Choose Thermomix?</h4>
+        <hr class="home-divider">
+        <p class="home-text-big07">
+          Purchasing a Thermomix is an exclusive experience – only through advisors like me (Isabella).
+        </p>
+        <p class="home-text-big07">
+          Thermomix TM6, the latest model in white, is priced at £1189 with no discounts.
+        </p>
+        <p class="home-text-big07">
+          Get your Thermomix in 3 ways:
+        </p>
+        <ul class="home-text-big07">
+          <li>Earn one for FREE by becoming an advisor.</li>
+          <li>Spread payments from £32.48 per month.</li>
+          <li>One-time payment by card.</li>
+        </ul>
+        <p class="home-text-big07">
+          What's in it for you?
+        </p>
+        <p class="home-text-big07">
+          Reach out and get personalized support, virtual sessions, classes, and more.
+        </p>
+        <p class="home-text-big07">
+          Ready to start? Call 07771 648 111 and I'll be your advisor.
+        </p>
+        <p class="home-text-big07">
+          Enjoy smooth payment options:
+        </p>
+        <ul class="home-text-big07">
+          <li>12 months: £106.74 p/m</li>
+          <li>24 months: £57.07 p/m</li>
+          <li>36 months: £40.62 p/m</li>
+          <li>48 months: £32.48 p/m</li>
+        </ul>
+        <p class="home-text-big07">
+          For a limited time, 0% finance over 12 months on spending over £1349, including an extra bowl.
+        </p>
+        <p class="home-text07">
+          Fill the form below for demos and details. Join the Thermomix community – innovation and culinary delight await.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   
 
-
-<div class="form-container">
+<div class="form-container" id="form-container">
       <h2>Contact Us</h2>
-      <form action="https://formsubmit.co/cc36dece6328496486501f3409d37610" method="POST" class="contact-form">
+      <form action="https://formspree.io/f/mrgwkgej" method="POST" class="contact-form">
         <!--Honeypot -->
         <input type="text" name="_honey" style="display: none;">
         <!-- disable Captcha -->
@@ -189,27 +383,27 @@
           
         <div class="form-group">
           <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="fname" required>
+          <input type="text" id="fname" placeholder= "First Name" name="fname" required>
         </div>
         <div class="form-group">
           <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname" required>
+          <input type="text" id="lname" placeholder= "Last Name" name="lname" required>
         </div>
         <div class="form-group">
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+    <input type="email" id="email" placeholder= "Email" name="email" required>
         </div>
         <div class="form-group">
           <label for="mobile">Mobile Number:</label>
-          <input type="tel" id="mobile" name="mobile" required>
+          <input type="tel" id="mobile" placeholder= "Phone number" name="mobile" required>
         </div>
         <div class="form-group">
           <label for="postcode">Post Code:</label>
-          <input type="text" id="postcode" name="postcode" required>
+          <input type="text" id="postcode" placeholder= "Postcode(to determine which advisor to refere you to)" name="postcode" required>
         </div>
         <div class="form-group">
           <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" placeholder= "Any message you would like to add" name="message" required></textarea>
         </div>
 
         
@@ -245,17 +439,18 @@
     </div>
 
 
+<script>
+</script>
 
 
 
 
 
 
-  <footer class="w3-footer w3-theme-d1 w3-margin-top">
-    <a href="#home" onclick="scrollToTop()">To the top</a>
-  </footer>
+  
   <script src="{{ url_for('static', filename='scripts/sidebar.js') }}"></script>
   <script src="{{ url_for('static', filename='scripts/thumbnail.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/offers.js') }}"></script>
 
 
 </body>
